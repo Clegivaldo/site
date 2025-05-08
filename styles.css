@@ -1,0 +1,327 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('public/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+#centerhorizon {
+  width: 100%;
+  height: 10%;
+  display: flex;
+}
+
+.logo-container {
+  width: 20%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.title-container {
+  width: 80%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 100px;
+}
+
+.title-container h3 {
+  color: green;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 80px;
+}
+
+#center {
+  width: 100%;
+  height: 76%;
+  display: flex;
+  position: relative;
+}
+
+#bar {
+  width: 18%;
+  height: 60%;
+}
+
+.carousel {
+  width: 64%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+  
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.carousel img:not(:first-child) {
+  transform: translateX(100%);
+}
+
+.carousel img.active {
+  transform: translateX(0);
+}
+
+.carousel img.previous {
+  transform: translateX(-100%);
+}
+
+/*----------------------------------------------*/
+
+.left, .right {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.left img,
+.right img {
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin-top: 10%;
+}
+
+.left img {
+  left: 10%;
+  animation: slideLeft 1s linear;
+}
+
+.right img {
+  right: -10%;
+  animation: slideRight 1s linear;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: 100%;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    right: 100%;
+  };
+}
+
+#emec {
+  width: 17vw;
+  height: auto;
+  left: 7px;
+  margin-bottom: 0px;
+}
+
+/*----------------------------------------------*/
+
+a button {
+  background-color: #007D4C;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 12x;
+  cursor: pointer;
+  text-decoration: none;
+  margin: auto;
+}
+
+a button:hover {
+  background-color: green;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  border: solid;
+  border-color: #038569;
+  border-width: 5px;
+}
+
+.icon-link:hover {
+  background-color: green;
+}
+
+.fa {
+  font-size: 20px;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* .color-change {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.8s ease;
+}
+
+.color-change:hover {
+  filter: hue-rotate(120deg);
+} */
+
+.color-changing, .color-changing-mobile {
+  width: 100%;
+  height: 100%;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.color-changing-mobile, .emec-mobile {
+  display: none;
+}
+
+/* ------------- Estilos adicionais para dispositivos móveis --------------- */
+
+@media (max-width: 768px) {
+/* Estilos para telas menores que 768px */
+
+html, body, #container{
+  margin: 0;
+  padding: 0;
+  background-size: auto;
+  /* overflow-y: scroll; */
+}
+
+.logo-container {
+  width: 25%;
+} 
+
+.title-container {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo {
+  width: 100px;
+}
+
+#container {
+  height: 100%;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.title-container h3 {
+  text-align: center;
+  color: green;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  font-size: 11px;
+}
+
+#center {
+  margin-top: 10px;
+  height: 55%;
+}
+
+#bar {
+  width: 50%;
+}
+
+.left, .right {
+  position: absolute;
+  top: 230px;
+  justify-content: space-between;
+}
+
+#bar a {
+  display: flex;
+}
+
+.left {
+  left: 5px;
+}
+
+.right {
+  right: 5px;
+}
+
+.carousel {
+  width: 100%;
+  height: 250px;
+}
+
+#bar a:last-child {
+  display: none;
+}
+
+.color-changing-mobile {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  align-items: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.color-changing-mobile img {
+  width: 50%;
+}
+
+.emec-mobile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#emec {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.social-icons {
+  padding: 20px;
+}
+
+.icon-link {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+}

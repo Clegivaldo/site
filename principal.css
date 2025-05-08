@@ -1,0 +1,914 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    background-image: url('public/assets/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.whatsapp-button i {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  .container div {
+    width: 30px;
+    height: 100%;
+    margin-left: 10px;
+  }
+  
+  #logo {
+    height: 50px;
+  }
+
+/* -------------------------------------- */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+nav ul li:hover > a {
+  background-color: #125801;
+  border-style: solid;
+  border-color: #125801;
+  border-width: 1px;
+}
+
+nav ul li ul {
+  text-align: left;
+  width: 160px;
+  display:none; 
+  position:absolute; 
+  top:29px; 
+  left:0; 
+  background-color:#00c800; 
+  font-size:.9em;
+}
+
+nav ul li:hover > ul {
+  display:block;
+}
+
+nav ul li ul li {
+  border-style: solid;
+  border-color: #125801;
+  border-width: 1px;
+  display:block; 
+  position:relative;
+}
+
+nav ul li ul li a {
+  text-align: left;
+  padding-left:.5em;
+}
+
+nav ul li ul li ul {
+  /* width: 200px; */
+  display:none; 
+  left: 160px; 
+  top:0;
+  background-color:#00c800;
+  font-size:.9em;
+}
+
+nav ul li:hover > ul >li:hover >ul{
+  display:block;
+}
+
+nav ul li.last-item ul {
+  left: auto; /* Remove o alinhamento padrão à esquerda */
+  right: 0;   /* Alinha o submenu à direita */
+}
+
+  /* Estilos para o popup */
+.popup, .popupegresso, .popupdados, .popuprevista {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  z-index: 9999;
+}
+
+.popup-content, .popupegresso-content, .popupdados-content, .popuprevista-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: left;
+  border-radius: 20px;
+  border-style: double;
+  border-color: #0d5100;
+  border-width: 10px;
+}
+
+.popupegresso-content .sessao5, .popupegresso-content .sessao5 div:last-child {
+  padding: 0;
+  width: 100%;
+}
+
+.popupdados p, .popuprevista p {
+  margin: 6px;
+}
+
+.popup h2, .popupegresso h2, .popupdados h2, .popuprevista h2 {
+  margin-top: 0;
+}
+
+.popup ul, .popupegresso ul, .popupdados ul, .popuprevista ul {
+  flex-direction: column;
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+}
+
+.popup ul li, .popupegresso ul li, .popupdados ul li {
+  margin-bottom: 10px;
+}
+
+.popup a, .popupegresso a, .popupdados a, .popuprevista a {
+  text-decoration: none;
+  color: #74a901;
+  text-align: left;
+}
+
+.popup a:hover{
+  color: #125801;
+}
+
+/* ----------------------------------------------- */
+
+main h1 {
+  text-align: center;
+  color: #333;
+  color: green;
+}
+
+.cursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cursos a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.cursos img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.agende {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.agende a button {
+  background-color: yellowgreen;
+  color: green;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 12x;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.agende a button:hover {
+  background-color: green;
+  color: white;
+}
+
+
+/* ----------------------------------------------- */
+
+.intro {
+  margin-top: -50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.intro img {
+  width: 100%;
+  justify-content: center;
+  height: 600px;
+}
+
+.presencial_bt2 {
+  position: absolute;
+  bottom: 230px;
+  right: 50px;
+}
+
+.presencial_bt2 a {
+  display: block;
+  background-color: white;
+  color: green;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.presencial {
+  background-image: url(/public/assets/backindex.png);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.presencial_text {
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-left: 20px;
+}
+
+.presencial_bt {
+  margin-left: 30px;
+  font-weight: bolder;
+  height: 15px;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;  
+}
+
+.presencial a {
+  text-decoration: none;
+  color: #0d5100;
+  font-weight: bold;
+}
+
+.quem_somos, .future {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 210px;
+  font-family: Tahoma, sans-serif;
+}
+
+.quem_somos_tittle, .future_tittle, .estrutura_tittle {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #7bc201;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 40px;
+  color: white;
+}
+
+.quem_somos_text, .future_text {
+  display: block;
+  text-align: left;
+  background-color: rgba(244, 244, 244, 0.8);
+  width: 97%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.mvv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mvv > div {
+  width: 33%;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.mvv h3 {
+  background-color: #7bc201;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mvv p {
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(244, 244, 244, 0.8);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.estrutura {
+  display: flex;
+  flex-direction: column;
+}
+
+.estrutura > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.estrutura_comp {
+  height: 400px;
+  background-color: rgba(244, 244, 244, 0.8);
+  padding: 20px;
+}
+
+.estrutura_1 {
+  width: 40%;
+  background-image: url("public/assets/lab.jpg");
+  background-size: cover;
+  color: black;
+  height: 400px;
+  margin: 10px;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
+.estrutura_1 p, .estrutura_2 p {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.estrutura_2 {
+  width: 40%;
+  background-image: url("public/assets/bib.jpg");
+  background-size: cover;
+  color: black;
+  height: 400px;
+  margin: 10px;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
+/* --------------------------------------- */
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: green;
+  color: #fff;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  background-color: #00f000;
+}
+
+.fa {
+  font-size: 20px;
+}
+
+/* --------------------------------------- */
+
+.sessao5 {
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.sessao5 div:first-child {
+  flex: 1;
+}
+
+.sessao5 div img {
+  width: 90%;
+  height: auto;
+  margin: 30px;
+  border-radius: 30px;
+}
+
+.sessao5 div:last-child {
+  width: 100%;
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  justify-content: center;
+}
+
+.sessao5 h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: green;
+}
+
+.sessao5 form input {
+  width: 96%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sessao5 textarea {
+  width: 96%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sessao5 form button {
+  width: 100%;
+  padding: 10px;
+  background-color: greenyellow;
+  color: green;
+  border: none;
+  cursor: pointer;
+}
+
+.sessao5 form button:hover {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#success-message {
+  width: 90%;
+  font-size: 12px;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  font-family: tahoma;
+}
+
+/* --------------------------------------- */
+
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+footer div {
+  margin-bottom: 20px;
+}
+
+footer h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+footer div:last-child {
+  font-size: 14px;
+  color: #777;
+}
+
+footer div:last-child p {
+  margin-top: 10px;
+}
+
+footer div:last-child p::before {
+  content: '\00a9';
+}
+
+footer div:last-child p a {
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer div:last-child p a:hover {
+  color: #333;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 10%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.two_footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.two_footer > div {
+  flex-basis: 33.33%;
+}
+
+.two_footer h4 {
+  margin-bottom: 10px;
+}
+
+.two_footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.two_footer li {
+  margin-bottom: 5px;
+}
+
+.two_footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+.two_footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header ul li {
+  margin: 2px;
+}
+
+.container div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+}
+
+#logo {
+  width: 100px;
+}
+
+nav {
+  font-size: xx-small;
+  width: 98%;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: #0d5100;
+  padding: 0;
+  margin: 2px;
+}
+
+nav ul li ul, nav ul li ul li ul {
+  background-color: rgba(0, 200, 0);
+  width: 100px;
+}
+
+nav ul li ul li ul {
+  left: 100px;
+}
+
+nav ul li ul li ul li ul{
+  left: 100px;
+}
+
+.popup, .popupegresso, .popupdados, .popuprevista {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  z-index: 9999;
+}
+
+.popup-content, .popupegresso-content, .popupdados-content, .popuprevista-content {
+  width: 80%;
+  touch-action: manipulation;
+}
+
+.popup p, .popupegresso p, .popupdados p, .popuprevista p {
+  font-size: smaller;
+  padding: 2px;
+  margin: 2px;
+}
+
+.presencial_bt2 {
+  display: none;
+}
+
+.popup h2, .popupegresso h2, .popupdados h2, .popuprevista h2 {
+  font-size: medium;
+}
+
+/* ------- Menu OK -------- */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.intro img {
+  width: 100%;
+  height: 200px;
+}
+
+.presencial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.presencial_text {
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+}
+
+.presencial_text  h1{
+  font-size: small;
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.presencial_text p {
+  font-size: small;
+  padding: 0;
+  margin: 0;
+}
+
+.presencial_bt {
+  margin-top: 30px;
+}
+
+.quem_somos_tittle, .future_tittle, .estrutura_tittle {
+  text-align: center;
+  font-size: small;
+}
+
+.quem_somos {
+  width: 100%;
+  height: 300px;
+}
+
+.quem_somos_text, .future_text {
+  width: 90%;
+  font-size: small;
+  padding: 10px;
+}
+
+.mvv > div {
+  width: 100%;
+}
+
+.mvv {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: small;
+}
+
+.missao p, .visao p, .valores p {
+  width: 90%;
+  font-size: small;
+  padding: 10px;
+}
+
+.estrutura > div {
+  width: 100%;
+}
+
+.estrutura {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.estrutura_comp{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.estrutura_1, .estrutura_2{
+  width: 100%;
+}
+
+.estrutura > div {
+  flex-direction: column;
+}
+.estrutura p {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  font-size: smaller;
+}
+
+footer {
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+footer div {
+  flex-basis: 50%;
+  margin-bottom: 10px;
+}
+
+footer h3 {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.map-container{
+  width: 100%;
+  height: 20px;
+}
+
+.cursos {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cursos a img {
+  margin: 0;
+  width: 90%;
+}
+
+main {
+  margin-top: 0px;
+}
+
+.agende {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.agende button {
+  width: 100%;
+}
+
+}

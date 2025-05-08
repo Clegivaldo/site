@@ -1,0 +1,13 @@
+    <section>
+        <div class="gallery">
+            <!-- Loop para criar as tags <a> e <img> -->
+            <?php
+            for ($i = 1; $i <= 282; $i++) {
+                $imagePath = "public/assets/img ($i).jpg";
+            ?>
+                <a data-fancybox="gallery" href="<?php echo $imagePath; ?>">
+                    <img src="<?php echo $imagePath; ?>" alt="Imagem <?php echo $i; ?>">
+                </a>
+            <?php } ?>
+        </div>
+    </section>
