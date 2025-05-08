@@ -6,30 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx - Pós-Graduação</title>
-    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png"/>
-    <link rel="stylesheet" href="/pos.css">
+    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
+ <link rel="stylesheet" href="global.css">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
   <a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="whatsapp-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-    <header>
-      <div class="container">
-        <div class="div-logo">
-          <a href="principal"><img id="logo" src="public/assets/logo.png"></a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index">Início</a></li>
-            <li><a href="principal">Institucional</a></li>
-            <li><a href="https://portais.qualinfonet.com.br/facx/">Sou aluno</a></li>
-            <li><a href="https://portais.qualinfonet.com.br/facx/">Sou professor</a></li>
-            <li><a href="#" onclick="openPopup()">Regulamentos e editais</a></li>
-          </ul>
-        </nav>  
-      </div>
-    </header>
+ <?php include 'menu.html'; ?>
 
     <!-- Janela popup -->
     <div id="popup" class="popup" onclick="closePopup()">
@@ -200,29 +185,6 @@
       </div>
     </section>
 
-    <footer>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/facx.xingu" class="icon-link"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/facx_altamira" class="icon-link"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@facx-faculdadedoxingu1134" class="icon-link"><i class="fab fa-youtube"></i></a>
-        <a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="icon-link"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <div>
-        <h3>Contato:</h3>
-        <p>(93) 99196-8181</p>
-        <p>(91) 99393-3545</p>
-      </div>
-      <div>
-        <h3>Email:</h3>
-        <p>posgraduacao@facx.edu.br</p>
-      </div>
-      <div>
-        <h3>Endereço:</h3>
-        <p>Av. João Pessoa, 1290 - Catedral, Altamira - PA, 68371-040</p>
-      </div>
-      <div><p>Copyright&copy; FACX - Faculdade de Ciências Humanas e Sociais do Xingu e Amazônia</p></div>
-    </footer>
-
-<script src="script.js"></script>
+ <?php include 'footer.html'; ?>
 </body>
 </html>

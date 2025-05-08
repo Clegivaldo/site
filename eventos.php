@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx - Eventos</title>
-    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
-    <link rel="stylesheet" href="/principal.css">
-    <!-- Add icon library -->
+ <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 	<!-- Fancybox CSS -->
@@ -20,44 +18,6 @@
 <!-- Fancybox JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-<style>
-    .event-year {
-        cursor: pointer;
-        margin: 10px 0;
-        padding: 10px;
-        background-color: green;
-        border: 1px solid #ccc;
-        color: white; /* Cor verde para o texto */
-        font-weight: bold; /* Texto em negrito */
-        text-align: center;
-    }
-    .event-list {
-        display: none;
-        margin: 10px 0;
-        display: flex;
-        flex-wrap: wrap; /* Permite que os itens desçam para a próxima linha */
-    }
-    .event-item {
-        margin: 5px;
-        text-align: center; /* Centraliza o texto */
-        flex: 0 1 150px; /* Define o tamanho flexível dos itens */
-    }
-    .event-item img {
-        max-width: 200px;
-        height: 200px; /* Altura fixa para as imagens */
-        border-radius: 10px; /* Arredonda os cantos da imagem */
-        object-fit: cover; /* Garante que a imagem se ajuste dentro do espaço, mantendo a proporção */
-    }
-    .event-item p {
-        color: #055530; /* Cor verde para o texto */
-        font-weight: bold; /* Texto em negrito */
-        margin-top: 5px; /* Espaço entre a imagem e o texto */
-        text-decoration: none;
-    }
-    .event-item a {
-        text-decoration: none; /* Remove sublinha dos links */
-        color: inherit; /* Mantém a cor do link igual à cor do texto ao redor */
-    }
 
     @media screen and (max-width: 768px) {
         .event-item {
@@ -71,139 +31,7 @@
 </head>
 
 <body>
-	<a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="whatsapp-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-	<header>
-		<div class="container">
-			<div class="div-logo">
-				<a href="principal"><img id="logo" src="public/assets/logow.png"></a>
-			</div>
-			<nav>
-				<ul>
-					<li class="menu"><a href="/index">Início</a></li>
-					<li class="menu"><a>Cursos</a>
-						<ul>
-							<li class="sub"><a href="#graduacao">Graduação</a></li>
-							<li class="sub"><a href="pos-graduacao">Pós</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Editais</a>
-						<ul>
-							<li class="sub"><a
-									href="public/docs/Edital_001_de_Inscrição_Especialização_FACX.pdf">Processo Seletivo</a></li>
-							<li class="sub"><a href="public/docs/EDITAL_PSS_DOCENTE_2024.pdf">Edital P.S. Docente</a>
-							</li>
-							<li class="sub"><a href="public/docs/EDITAL DE MONITORIA 2024.1.pdf">Monitoria</a></li>
-							<li class="sub"><a href="public/docs/Edital_de_publicação_2025.1.pdf">Edital vestibular</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Portal Acadêmico</a>
-						<ul>
-							<li class="sub"><a href="atividades-complementares.html">Atividades complementares</a></li>
-							<li class="sub"><a>Informações acadêmicas</a>
-								<ul>
-									<li class="sub-sub"><a>Manuais</a>
-										<ul>
-										<li class="sub-sub2"><a href="public/docs/MANUAL DO ALUNO.pdf">Manual do Aluno</a></li>
-											<li class="sub-sub2"><a href="public/docs/MANUAL DO PROFESSOR_FACX -2023.pdf">Manual do Professor</a></li>
-											<li class="sub-sub2"><a href="public/docs/Manual_biblioteca.pdf">Manual da Biblioteca</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_laboratorio.pdf">Manual de Informática - Laboratório</a></li>
-											<li class="sub-sub2"><a href="public/docs/Manual_de_boas_praticas.pdf">Manual de Boas Práticas - Laboratório</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_monitoriafacx.pdf">Manual de Monitoria</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_coordenador_facx_22.pdf">Manual do Coordenador</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_de_mentoria_facx_22.pdf">Manual de Mentoria</a></li>
-											<li class="sub-sub2"><a href="public/docs/MANUAL TCC - FACX.pdf">Manual de TCC FACX</a></li>
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Regulamentos</a>
-										<ul>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_OUVIDORIA_FACX -2023 (1).pdf">Regulamento ouvidoria FACX</a></li>
-											<!-- <li class="sub-sub2"><a href="public/docs/regulamento_tcc_adm.pdf">Regulamento TCC Administração</a></li>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_TCC_ENF.pdf">Regulamento TCC Enfermagem</a></li> -->
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_TCC_TODOS OS CURSOS.pdf">Regulamento TCC Todos os cursos</a></li>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO ESTAGIO SUPERVISIONADO FACX.pdf">Regulamento estágio supervisionado</a></li>
-										</ul>
-									</li>
-									<!-- <li class="sub-sub"><a>Administração</a>
-										<ul>
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Contabilidade</a>
-										<ul>
-												
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Enfermagem</a></li>
-										<ul>
-										</ul>
-									<li class="sub-sub"><a>Direito</a>
-										<ul>
-												
-										</ul>
-									</li> -->
-									<li class="sub-sub"><a>Portarias</a>
-										<ul>
-												
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="sub"><a>Biblioteca</a>
-								<ul>
-									<li class="sub-sub"><a href="/revistas.html">Revistas</a></li>
-									<li class="sub-sub"><a
-											href="https://dliportal.zbra.com.br/Login.aspx?key=FACX">Minha Biblioteca</a></li>
-									<li class="sub-sub"><a href="public/docs/tutorial_MB_online.pdf">Tutorial</a></li>
-									<li class="sub-sub"><a
-											href="https://dliadmin.zbra.com.br/Login.aspx">Gerenciamento</a></li>
-									<li class="sub-sub"><a href="#" onclick="openPopupdados()">Base de Dados</a></li>
-								</ul>
-							</li>
-							<li class="sub"><a href="https://ava.facx.edu.br/">Moodle</a></li>
-							<li class="sub"><a href="https://portais.qualinfonet.com.br/facx/">Acesso ao Portal</a></li>
-							<li class="sub"><a
-									href="https://portais.qualinfonet.com.br/facx/acadweb.modulo.eventos.php">Inscrições
-									para Eventos</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Conheça</a>
-						<ul>
-							<li class="sub"><a href="public/docs/APRESENTAÇÃO - NAAP.pdf">NAAP</a></li>
-							<li class="sub"><a href="public/docs/NIP_Facx.pdf">NIP</a></li>
-							<li class="sub"><a>CPA</a>
-								<ul>
-									<li class="sub-sub"><a href="public/docs/CPA_Facx.pdf">CPA</a></li>
-									<li class="sub-sub"><a>Evidências da CPA</a>
-										<ul>
-											<li class="sub-sub2"><a href="public/docs/Conquistas CPA 2024.pdf">Conquistas CPA 2024</a></li>
-											<li class="sub-sub2"><a href="public/docs/Conquistas CPA 2024.2s.pdf">Conquistas CPA 2024.2</a></li>
-										</ul>
-									</li>
-									<li class="sub-sub"><a href="public/docs/Relat_Autoavalicao_CPA_Facx_2018.pdf">Relatório 2018</a></li>
-									<li class="sub-sub"><a href="public/docs/relat_cpa2019_facx.pdf"><span>Relatório 2019</span></a></li>
-									<li class="sub-sub"><a href="public/docs/relat_cpa2020_facx.pdf"><span>Relatório 2020</span></a></li>
-									<li class="sub-sub"><a href="public/docs/Relat_Autoavaliacao_Inst_CPA_Facx_2021_22.pdf">Relatório 2021/22</a></li>
-									<li class="sub-sub"><a href="public/docs/RELATÓRIO FINAL DE AUTOAVALIAÇÃO INSTITUCIONAL -Biênio 2022_2023.pdf">Relatório 2022/23</a></li>
-								</ul>
-							</li>
-							<li class="sub"><a href="public/docs/NUEDS.pdf">NUEDS</a></li>
-							<li class="sub"><a href="public/docs/PROGRAMA DE ACESSIBILIDADE E INCLUSÃO.pdf">COPAC</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="menu"><a href="#" onclick="openPopup()">Programas</a></li>
-					<li class="menu"><a href="#" onclick="openPopupEgresso()">Egresso</a></li>
-					<li class="menu"><a href="eventos.php">Eventos</a></li> <!-- onclick="openEventos() -->
-					<li class="menu last-item"><a>Diplomas</a>
-						<ul>
-							<li class="sub-sub"><a href="consulta-diploma">Consultar diplomas</a></li>
-							<li class="sub-sub"><a href="public/docs/RELAÇÃO DE DIPLOMADOS 02-2020 á 08-2024.pdf">Publicação de Diplomas no D.O.U</a></li>	
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<?php include 'menu.html'; ?>
 
     <!-- Janela popup PROGRAMAS-->
     <div id="popup" class="popup" onclick="closePopup()">
@@ -484,5 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
 <script src="script.js"></script>
+<script src="script.js"></script>
+<?php include 'footer.html'; ?>
 </body>
 </html>

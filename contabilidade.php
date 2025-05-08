@@ -6,35 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx - Graduação em Contabilidade</title>
-    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png"/>
-    <link rel="stylesheet" href="/contabilidade.css">
+    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
+    <link rel="stylesheet" href="/global.css">
     <!-- Add icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-      <div class="container">
-        <div style="width: 30px; height: 100%; margin-left: 10px;">
-          <a href="principal"><img id="logo" src="public/assets/logo.png"></a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="index">Início</a></li>
-            <li><a href="principal">Institucional</a></li>
-            <li><a href="https://portais.qualinfonet.com.br/facx/">Sou aluno</a></li>
-            <li><a href="https://portais.qualinfonet.com.br/facx/">Sou professor</a></li>
-          </ul>
-        </nav>  
-      </div>
-    </header>
+<?php include 'menu.html'; ?>
 
-    <section>
-      <div class="intro">
-        <img src="public/assets/img4.png"/>
-        <div class="texto_contabilidade">
-          <h3>GRADUAÇÃO EM CONTABILIDADE</h3>
-          <p>Contabilidade é a ciência que designa a totalidade dos registros numéricos realizados com o fim de determinar e ordenar, de uma forma completa, todos os movimentos, em valor e em quantidades, efetuados no âmbito de atividade de uma empresa
+    <main>
+        <section class="sessao1">
             O objetivo principal da contabilidade é garantir as informações econômicas para governos, fornecedores, bancos, investidores, funcionários e sindicatos. São informações que envolvem contas a pagar e a receber, patrimônio, etc. e, a partir delas, é possível gerar demonstrações contábeis, tais como Balanço Patrimonial, Demonstração do Resultado do Exercício, Demonstração de Lucros ou Prejuízos Acumulados e Demonstração de Origens e Aplicação de Recursos.</p>
           <div class="button"><a href="https://portais.qualinfonet.com.br/facx/acadweb.modulo.eventos.php">AGENDE SEU VESTIBULAR</a></div>
         </div>
@@ -99,11 +81,10 @@
     
       </section>
 
-    <section class="sessao5">
+      <section class="sessao5">
       <div>
         <img src="public/assets/contabilidade60.png" alt="desconto">
       </div>
-      <div class="formulario">
         <h1>Tem dúvidas? Faça uma pergunta</h1>
         <form id="meuFormulario" method="POST">
           <!-- Campos do formulário -->
@@ -116,30 +97,11 @@
         </form>
         <div id="success-message" style="display: none;">Mensagem enviada com sucesso!<br>Entraremos em contato em breve.</div>
       </div>
-    </section>
+      </section>
 
-    <footer>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/facx.xingu" class="icon-link"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/facx_altamira" class="icon-link"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@facx-faculdadedoxingu1134" class="icon-link"><i class="fab fa-youtube"></i></a>
-        <a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="icon-link"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <div>
-        <h3>Contato:</h3>
-        <p>(93) 99196-8181</p>
-      </div>
-      <div>
-        <h3>Email:</h3>
-        <p>secretaria@facx.edu.br</p>
-      </div>
-      <div>
-        <h3>Endereço:</h3>
-        <p>Av. João Pessoa, 1290 - Catedral, Altamira - PA, 68371-040</p>
-      </div>
-      <div><p>Copyright&copy; FACX - Faculdade de Ciências Humanas e Sociais do Xingu e Amazônia</p></div>
-    </footer>
+    </main>
 
-<script src="script.js"></script>
+<?php include 'footer.html'; ?>
+
 </body>
 </html>

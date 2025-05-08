@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades complementares</title>
-    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
-    <link rel="stylesheet" href="/principal.css">
-	<!-- Add icon library -->
+    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />    
+    <link rel="stylesheet" href="/global.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
     /* Centraliza o container de eventos */
@@ -60,140 +59,8 @@
 </head>
 
 <body>
-	<a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="whatsapp-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-	<header>
-		<div class="container">
-			<div class="div-logo">
-				<a href="principal"><img id="logo" src="public/assets/logow.png"></a>
-			</div>
-			<nav>
-				<ul>
-					<li class="menu"><a href="/index">Início</a></li>
-					<li class="menu"><a>Cursos</a>
-						<ul>
-							<li class="sub"><a href="#graduacao">Graduação</a></li>
-							<li class="sub"><a href="pos-graduacao">Pós</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Editais</a>
-						<ul>
-							<li class="sub"><a
-									href="public/docs/Edital_001_de_Inscrição_Especialização_FACX.pdf">Processo Seletivo</a></li>
-							<li class="sub"><a href="public/docs/EDITAL_PSS_DOCENTE_2024.pdf">Edital P.S. Docente</a>
-							</li>
-							<li class="sub"><a href="public/docs/EDITAL DE MONITORIA 2024.1.pdf">Monitoria</a></li>
-							<li class="sub"><a href="public/docs/Edital_de_publicação_2025.1.pdf">Edital vestibular</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Portal Acadêmico</a>
-						<ul>
-							<li class="sub"><a href="atividades-complementares.html">Atividades complementares</a></li>
-							<li class="sub"><a>Informações acadêmicas</a>
-								<ul>
-									<li class="sub-sub"><a>Manuais</a>
-										<ul>
-											<li class="sub-sub2"><a href="public/docs/MANUAL DO ALUNO.pdf">Manual do Aluno</a></li>
-											<li class="sub-sub2"><a href="public/docs/MANUAL DO PROFESSOR_FACX -2023.pdf">Manual do Professor</a></li>
-											<li class="sub-sub2"><a href="public/docs/Manual_biblioteca.pdf">Manual da Biblioteca</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_laboratorio.pdf">Manual de Informática - Laboratório</a></li>
-											<li class="sub-sub2"><a href="public/docs/Manual_de_boas_praticas.pdf">Manual de Boas Práticas - Laboratório</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_monitoriafacx.pdf">Manual de Monitoria</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_coordenador_facx_22.pdf">Manual do Coordenador</a></li>
-											<li class="sub-sub2"><a href="public/docs/manual_de_mentoria_facx_22.pdf">Manual de Mentoria</a></li>
-											<li class="sub-sub2"><a href="public/docs/MANUAL TCC - FACX.pdf">Manual de TCC FACX</a></li>
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Regulamentos</a>
-										<ul>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_OUVIDORIA_FACX -2023 (1).pdf">Regulamento ouvidoria FACX</a></li>
-											<!-- <li class="sub-sub2"><a href="public/docs/regulamento_tcc_adm.pdf">Regulamento TCC Administração</a></li>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_TCC_ENF.pdf">Regulamento TCC Enfermagem</a></li> -->
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO_TCC_TODOS OS CURSOS.pdf">Regulamento TCC Todos os cursos</a></li>
-											<li class="sub-sub2"><a href="public/docs/REGULAMENTO ESTAGIO SUPERVISIONADO FACX.pdf">Regulamento estágio supervisionado</a></li>
-										</ul>
-									</li>
-									<!-- <li class="sub-sub"><a>Administração</a>
-										<ul>
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Contabilidade</a>
-										<ul>
-												
-										</ul>
-									</li>
-									<li class="sub-sub"><a>Enfermagem</a></li>
-										<ul>
-										</ul>
-									<li class="sub-sub"><a>Direito</a>
-										<ul>
-												
-										</ul>
-									</li> -->
-									<li class="sub-sub"><a>Portarias</a>
-										<ul>
-												
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="sub"><a>Biblioteca</a>
-								<ul>
-									<li class="sub-sub"><a href="/revistas.html">Revistas</a></li>
-									<li class="sub-sub"><a
-											href="https://dliportal.zbra.com.br/Login.aspx?key=FACX">Minha Biblioteca</a></li>
-									<li class="sub-sub"><a href="public/docs/tutorial_MB_online.pdf">Tutorial</a></li>
-									<li class="sub-sub"><a
-											href="https://dliadmin.zbra.com.br/Login.aspx">Gerenciamento</a></li>
-									<li class="sub-sub"><a href="#" onclick="openPopupdados()">Base de Dados</a></li>
-								</ul>
-							</li>
-							<li class="sub"><a href="https://ava.facx.edu.br/">Moodle</a></li>
-							<li class="sub"><a href="https://portais.qualinfonet.com.br/facx/">Acesso ao Portal</a></li>
-							<li class="sub"><a
-									href="https://portais.qualinfonet.com.br/facx/acadweb.modulo.eventos.php">Inscrições
-									para Eventos</a></li>
-						</ul>
-					</li>
-					<li class="menu"><a>Conheça</a>
-						<ul>
-							<li class="sub"><a href="public/docs/APRESENTAÇÃO - NAAP.pdf">NAAP</a></li>
-							<li class="sub"><a href="public/docs/NIP_Facx.pdf">NIP</a></li>
-							<li class="sub"><a>CPA</a>
-								<ul>
-									<li class="sub-sub"><a href="public/docs/CPA_Facx.pdf">CPA</a></li>
-									<li class="sub-sub"><a>Evidências da CPA</a>
-										<ul>
-											<li class="sub-sub2"><a href="public/docs/Conquistas CPA 2024.pdf">Conquistas CPA 2024</a></li>
-											<li class="sub-sub2"><a href="public/docs/Conquistas CPA 2024.2.pdf">Conquistas CPA 2024.2</a></li>
-										</ul>
-									</li>
-									<li class="sub-sub"><a href="public/docs/Relat_Autoavalicao_CPA_Facx_2018.pdf">Relatório 2018</a></li>
-									<li class="sub-sub"><a href="public/docs/relat_cpa2019_facx.pdf"><span>Relatório 2019</span></a></li>
-									<li class="sub-sub"><a href="public/docs/relat_cpa2020_facx.pdf"><span>Relatório 2020</span></a></li>
-									<li class="sub-sub"><a href="public/docs/Relat_Autoavaliacao_Inst_CPA_Facx_2021_22.pdf">Relatório 2021/22</a></li>
-									<li class="sub-sub"><a href="public/docs/RELATÓRIO FINAL DE AUTOAVALIAÇÃO INSTITUCIONAL -Biênio 2022_2023.pdf">Relatório 2022/23</a></li>
-								</ul>
-							</li>
-							<li class="sub"><a href="public/docs/NUEDS.pdf">NUEDS</a></li>
-							<li class="sub"><a href="public/docs/PROGRAMA DE ACESSIBILIDADE E INCLUSÃO.pdf">COPAC</a>
-							</li>
-						</ul>
-					</li>
-
-					<li class="menu"><a href="#" onclick="openPopup()">Programas</a></li>
-					<li class="menu"><a href="#" onclick="openPopupEgresso()">Egresso</a></li>
-					<li class="menu"><a href="eventos.php">Eventos</a></li> <!-- onclick="openEventos() -->
-					<li class="menu last-item"><a>Diplomas</a>
-						<ul>
-							<li class="sub-sub"><a href="consulta-diploma">Consultar diplomas</a></li>
-							<li class="sub-sub"><a href="public/docs/RELAÇÃO DE DIPLOMADOS 02-2020 á 08-2024.pdf">Publicação de Diplomas no D.O.U</a></li>	
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-
+    <a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="whatsapp-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+    <header><?php include 'menu.html'; ?></header>
 
     <!-- Janela popup PROGRAMAS-->
     <div id="popup" class="popup" onclick="closePopup()">
@@ -468,93 +335,9 @@
     
     </div>
 
-	<footer>
-		<div class="social-icons">
-		  <a href="https://www.facebook.com/facx.xingu" class="icon-link"><i class="fab fa-facebook-f"></i></a>
-		  <a href="https://www.instagram.com/facx_altamira" class="icon-link"><i class="fab fa-instagram"></i></a>
-		  <a href="https://www.youtube.com/@facx-faculdadedoxingu1134" class="icon-link"><i class="fab fa-youtube"></i></a>
-		  <a href="https://wa.me/5593991968181?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site%20" class="icon-link"><i class="fab fa-whatsapp"></i></a>
-		</div>
-		<div>
-		  <h3>Contato:</h3>
-		  <p>(93) 99196-8181</p>
-		</div>
-		<div>
-		  <h3>Email:</h3>
-		  <p>secretaria@facx.edu.br</p>
-		  <p>posgraduacao@facx.edu.br</p>
-		</div>
-		<div>
-		  <h3>Endereço:</h3>
-		  <p>Av. João Pessoa, 1290 - Catedral, Altamira - PA, 68371-040</p>
-		</div>
-		<div><p>Copyright&copy; FACX - Facudade de Ciências Humanas e Sociais do Xingu e Amazônia</p></div>
-		
-		<div class="two_footer">
-			<div>
-				<div>
-					<h4>Quem Somos</h4>
-				</div>
-				<div>
-					<ul>
-						<li class="sub"><a href="public/docs/Edital_de_publicacao_2022.2.pdf">Vestibular 2022.2</a></li>
-						<li class="sub"><a href="public/docs/Edital_ps_docente.pdf">Edital P.S. Docente</a></li>
-						<li class="sub"><a href="public/docs/Edital_de_mentoria_facx_22.pdf">Mentoria</a></li>
-						<li class="sub"><a href="public/docs/Edital_de_publicacao_2022.1.pdf">Edital Publicação</a></li>
-					</ul>
-				</div>
-				<div>
-					<h4>REVISTA</h4>
-				</div>
-				<div>
-					<ul>
-						<li><a href="/revistas"><span>Revistas</span></a></li>
-					</ul>
-				</div>
-			</div>
-		
-			<div>
-				<div>
-					<h4>Conheça</h4>
-				</div>
-				<div>
-					<ul>
-						<li class="sub"><a href="public/docs/NAAP.pdf">NAAP</a></li>
-						<li class="sub"><a href="public/docs/NIP_Facx.pdf">NIP</a></li>
-						<li class="sub"><a href="public/docs/NUEDS.pdf">NUEDS</a></li>
-						<li class="sub"><a href="public/docs/COPAC.pdf">COPAC</a></li>
-					</ul>
-				</div>
-				<div>
-					<h4>CPA | Relatórios</h4>
-				</div>
-		
-				<div>
-					<ul>
-						<li class="sub-sub"><a href="public/docs/Relat_Autoavalicao_CPA_Facx_2018.pdf">Relatório 2018</a></li>
-						<li><a href="public/docs/relat_cpa2019_facx.pdf"><span>Relatório 2019</span></a></li>
-						<li><a href="public/docs/relat_cpa2020_facx.pdf"><span>Relatório 2020</span></a></li>
-						<li class="sub-sub"><a href="public/docs/Relat_Autoavaliacao_Inst_CPA_Facx_2021_22.pdf">Relatório 2021/22</a></li>
-					</ul>
-				</div>
-			</div>
-		
-			<div>
-				<div>
-					<h3>Ouvidoria</h3>
-				</div>
-		
-				<div>
-					<h4>+55 93 3515 0909 - 93 99196 8181</h4>
-					<h4>ouvidoria@facx.edu.br</h4>
-				</div>
-			</div>
-		</div>
-	
-		<div class="map-container">
-			<iframe loading="lazy" src="https://maps.google.com/maps?q=Avenida%20Jo%C3%A3o%20Pessoa%20-%201290%20%7C%20Catedral%20.%20Altamira%20Par%C3%A1&#038;t=m&#038;z=18&#038;output=embed&#038;iwloc=near" title="Avenida João Pessoa - 1290 | Catedral . Altamira Pará" aria-label="Avenida João Pessoa - 1290 | Catedral . Altamira Pará"></iframe>
-		</div>
-	</footer>
+    <?php include 'footer.html'; ?>
 
 </body>
+
+<script src="script.js"></script>
 </html>

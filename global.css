@@ -1,0 +1,278 @@
+:root {
+  --primary-color: #007bff; /* Azul */
+  --secondary-color: #28a745; /* Verde */
+  --dark-color: #343a40; /* Preto */
+  --light-color: #f8f9fa; /* Branco */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+ margin: 0;
+  padding-top: 70px; /* Para dar espaço à barra de navegação fixa */
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Estilos para a barra de navegação (menu.html) */
+header {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+nav .logo a {
+  color: var(--light-color);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-links li {
+ margin-left: 20px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav .nav-links li a {
+  color: var(--light-color);
+  transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+  color: var(--secondary-color);
+}
+
+.menu-toggle {
+  display: none; /* Oculto por padrão em telas maiores */
+  cursor: pointer;
+}
+
+/* Estilos para botões */
+button {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+ background-color: darken(var(--secondary-color), 10%);
+ transform: translateY(-3px);
+}
+
+button:active {
+ transform: translateY(-1px);
+}
+/* Estilos para o conteúdo principal */
+
+/* Contêineres principais e seções */
+main {
+  flex: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+section {
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--dark-color);
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: 15px;
+}
+/* Estilos para o rodapé (footer.html) */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 40px 20px;
+  margin-top: auto; /* Empurra o footer para baixo */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaçamento entre as colunas do rodapé */
+}
+
+footer .footer-section {
+  margin: 10px;
+}
+
+footer h3 {
+  color: var(--secondary-color);
+}
+
+footer a {
+ color: var(--light-color);
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Imagens responsivas */
+img {
+ max-width: 100%;
+  height: auto; /* Mantém a proporção */
+  display: block; /* Evita espaço extra abaixo da imagem */
+  border-radius: 8px; /* Bordas levemente arredondadas para imagens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Efeitos Hover, Active e Transições */
+a, button {
+ transition: color 0.3s ease, transform 0.3s ease;
+}
+a:hover {
+ color: var(--secondary-color);
+}
+
+/* Estilo para o ícone do menu hambúrguer */
+.burger {
+ display: none;
+ cursor: pointer;
+}
+
+.burger div {
+ width: 25px;
+ height: 3px;
+ background-color: var(--light-color);
+ margin: 5px;
+ transition: all 0.3s ease;
+}
+
+/* Estilos para o menu mobile quando ativo */
+.nav-links.active {
+ display: flex; /* Mostra o menu */
+ flex-direction: column;
+ width: 100%;
+ text-align: center;
+ position: absolute;
+ top: 60px; /* Ajuste para a altura do header */
+ left: 0;
+ background-color: var(--dark-color);
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+ padding: 10px 0;
+ z-index: 999; /* Abaixo do header fixo */
+}
+
+.nav-links.active li {
+ margin: 10px 0;
+}
+
+/* Animação do ícone do menu hambúrguer */
+.toggle .line1 {
+ transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+ opacity: 0;
+}
+
+.toggle .line3 {
+ transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsividade - Ajustes mais refinados */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none; /* Oculta o menu em telas menores */
+  }
+
+  nav .nav-links.active {
+ display: flex;
+  }
+
+  nav .nav-links li {
+ margin: 10px 0;
+ text-align: center;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o ícone do menu hambúrguer */
+  }
+
+  main {
+    padding: 10px; /* Reduz o padding em telas menores */
+  }
+
+  h1 {
+    font-size: 2em; /* Ajusta o tamanho do título principal */
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  footer {
+    flex-direction: column; /* Empilha os itens do rodapé em telas menores */
+  }
+}
+
+/* Classes para o rodapé mais organizado */
+.footer-section h3 {
+ margin-bottom: 15px;
+}
+.footer-section p, .footer-section a {
+ display: block; /* Cada item em uma nova linha */
+ margin-bottom: 5px;
+}

@@ -255,5 +255,17 @@ function autoResize(textarea) {
   textarea.style.height = textarea.scrollHeight + 'px';
 }
 
+// JavaScript para funcionalidade do menu mobile (menu hambúrguer)
+document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.querySelector('.burger'); // Classe do ícone do menu (ajuste se necessário)
+  const mainNav = document.getElementById('main-nav'); // ID do elemento de navegação principal
+
+  if (menuIcon && mainNav) {
+ menuIcon.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+    });
+  }
+});
+
 // -------------------------------------------------------------------------------------
 
