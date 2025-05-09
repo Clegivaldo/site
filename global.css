@@ -2,27 +2,43 @@
   --primary-color: #007bff; /* Azul */
   --secondary-color: #28a745; /* Verde */
   --dark-color: #343a40; /* Preto */
-  --light-color: #f8f9fa; /* Branco */
+  --light-color: #ffffff; /* Branco puro para fundo e texto em contraste */
+  --text-color: #555; /* Cor de texto padrão */
+  --border-color: #eee; /* Cor para bordas sutis */
+}
+/* Reset básico ou normalização */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
- margin: 0;
-  padding-top: 70px; /* Para dar espaço à barra de navegação fixa */
   background-color: var(--light-color);
   color: var(--dark-color);
   min-height: 100vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
+
+/* Estilos de tipografia */
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-color); /* Cor padrão para títulos */
+  margin-bottom: 0.8rem;
 }
 
 /* Estilos para a barra de navegação (menu.html) */
@@ -33,20 +49,28 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* Contêiner para centralizar e limitar a largura do conteúdo do header */
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
 }
 
 nav .logo a {
   color: var(--light-color);
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 nav ul {
@@ -54,23 +78,33 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 nav .nav-links li {
- margin-left: 20px;
-}
-
-nav ul li {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 nav .nav-links li a {
   color: var(--light-color);
-  transition: color 0.3s ease;
+  padding: 5px 0;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
 }
 
 nav .nav-links li a:hover {
-  color: var(--secondary-color);
+ color: var(--primary-color);
+ border-bottom: 2px solid var(--primary-color);
+}
+
+/* Estilos para dropdowns (se houver) */
+.dropdown {
+  position: relative;
+ display: inline-block;
+}
+
+.dropdown-content {
+ display: none; /* Oculto por padrão */
+  position: absolute;
 }
 
 .menu-toggle {
@@ -79,9 +113,9 @@ nav .nav-links li a:hover {
 }
 
 /* Estilos para botões */
-button {
+button, .button a {
   background-color: var(--secondary-color);
-  color: var(--light-color);
+  color: var(--light-color) !important; /* Importante para sobrescrever estilos de link */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -90,102 +124,172 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.button a {
+ display: inline-block; /* Para que o padding funcione */
+}
+
 button:hover {
- background-color: darken(var(--secondary-color), 10%);
- transform: translateY(-3px);
+  background-color: #218838; /* Tom mais escuro de verde no hover */
+  transform: translateY(-2px); /* Efeito sutil de levantar */
 }
 
-button:active {
- transform: translateY(-1px);
+button:active, .button a:active {
+  background-color: #1e7e34; /* Tom ainda mais escuro no active */
+  transform: translateY(-1px);
 }
+
 /* Estilos para o conteúdo principal */
-
-/* Contêineres principais e seções */
 main {
   flex: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
- margin-top: 20px;
- margin-bottom: 20px;
+  max-width: 1200px; /* Limita a largura do conteúdo principal */
+  margin: 20px auto; /* Centraliza o conteúdo e adiciona margem */
+  padding: 0 20px; /* Padding nas laterais */
 }
-
+/* Estilo para seções dentro do main */
 section {
-  padding: 20px;
+ padding: 50px 0; /* Mais padding para seções */
+  border-bottom: 1px solid var(--border-color); /* Linha divisória */
+  margin-bottom: 20px; /* Espaço após cada seção */
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
-  margin-bottom: 15px;
+section:last-child {
+  border-bottom: none; /* Remove a borda da última seção */
+  margin-bottom: 0;
 }
-
+/* Estilos específicos para títulos */
 h1 {
   font-size: 2.5em;
   text-align: center;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 15px;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  position: relative;
 }
-
+/* Underline animado para H1 */
+h1::after {
+  content: '';
+  display: block;
+  width: 60px; /* Largura do underline */
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 10px auto 0; /* Centraliza e adiciona espaço acima */
+  border-radius: 2px;
+}
 h2 {
   font-size: 2em;
   color: var(--dark-color);
+  margin-bottom: 15px;
 }
-
 h3 {
   font-size: 1.5em;
-}
-
-p {
+  color: var(--dark-color);
   margin-bottom: 15px;
+}
+/* Estilo para parágrafos */
+p {
+  margin-bottom: 1.5rem; /* Espaço maior entre parágrafos */
+  color: var(--text-color); /* Cor de texto padrão */
+}
+/* Estilos para listas */
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 20px;
+}
+ul li, ol li {
+  margin-bottom: 0.5rem;
 }
 /* Estilos para o rodapé (footer.html) */
 footer {
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 40px 20px;
-  margin-top: auto; /* Empurra o footer para baixo */
+  margin-top: 40px; /* Espaço entre o conteúdo principal e o rodapé */
+}
+/* Contêiner para centralizar e limitar a largura do conteúdo do footer */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Ajuste no espaçamento */
   flex-wrap: wrap;
-  gap: 20px; /* Espaçamento entre as colunas do rodapé */
+  gap: 40px; /* Aumento do espaçamento */
 }
 
 footer .footer-section {
-  margin: 10px;
+  flex: 1; /* Permite que as seções do rodapé cresçam */
+  min-width: 250px; /* Largura mínima para as seções */
+  margin-bottom: 20px; /* Espaço entre seções em telas pequenas */
 }
 
 footer h3 {
   color: var(--secondary-color);
+  margin-bottom: 20px; /* Mais espaço abaixo do título do rodapé */
+  font-size: 1.3em;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8); /* Cor de texto mais clara com transparência */
+  margin-bottom: 10px;
+  font-size: 0.95em;
 }
 
 footer a {
- color: var(--light-color);
-  margin-right: 10px;
-  transition: color 0.3s ease;
+  color: rgba(255, 255, 255, 0.8);
+  display: block; /* Cada link em uma nova linha */
+  margin-bottom: 8px;
+  transition: color 0.2s ease-in-out;
 }
 
 footer a:hover {
   color: var(--primary-color);
+ text-decoration: underline;
 }
 
 /* Imagens responsivas */
 img {
- max-width: 100%;
+  max-width: 100%;
   height: auto; /* Mantém a proporção */
   display: block; /* Evita espaço extra abaixo da imagem */
-  border-radius: 8px; /* Bordas levemente arredondadas para imagens */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+}
+
+/* Estilos para formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os campos do formulário */
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+form textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 100px;
 }
 
 /* Efeitos Hover, Active e Transições */
-a, button {
+a, button, .button a {
  transition: color 0.3s ease, transform 0.3s ease;
 }
 a:hover {
  color: var(--secondary-color);
 }
 
-/* Estilo para o ícone do menu hambúrguer */
+/* Estilo para o ícone do menu hambúrguer (burger) */
 .burger {
- display: none;
+  display: none; /* Inicialmente oculto em telas maiores */
  cursor: pointer;
+  z-index: 1001; /* Garantir que fique acima de outros elementos */
 }
 
 .burger div {
@@ -196,59 +300,74 @@ a:hover {
  transition: all 0.3s ease;
 }
 
-/* Estilos para o menu mobile quando ativo */
+/* Estilos para o menu mobile (inicialmente fora da tela) */
 .nav-links.active {
- display: flex; /* Mostra o menu */
- flex-direction: column;
- width: 100%;
- text-align: center;
- position: absolute;
- top: 60px; /* Ajuste para a altura do header */
- left: 0;
- background-color: var(--dark-color);
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
- padding: 10px 0;
- z-index: 999; /* Abaixo do header fixo */
+  display: flex; /* Mostra o menu */
+ /* Propriedades para transformar em menu mobile */
 }
 
 .nav-links.active li {
- margin: 10px 0;
+  margin: 15px 0; /* Espaço entre os itens do menu mobile */
 }
 
 /* Animação do ícone do menu hambúrguer */
 .toggle .line1 {
- transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: var(--primary-color); /* Mudar cor no toggle */
 }
 
 .toggle .line2 {
- opacity: 0;
+  opacity: 0;
 }
 
-.toggle .line3 {
- transform: rotate(45deg) translate(-5px, -6px);
+.toggle .line3 { /* Correção da classe aqui */
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: var(--primary-color); /* Mudar cor no toggle */
 }
 
 /* Responsividade - Ajustes mais refinados */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* Breakpoint para tablets e mobile */
+  body {
+    padding-top: 80px; /* Ajuste o padding do body para acomodar o header mobile */
+  }
+
+  header {
+    padding: 15px 0; /* Mais padding para o header mobile */
+  }
+  nav .container {
+    padding: 0 15px;
+  }
+
   nav .nav-links {
     display: none; /* Oculta o menu em telas menores */
+    flex-direction: column; /* Garante que os links fiquem em coluna no mobile */
+    align-items: center; /* Centraliza os links no mobile */
   }
 
   nav .nav-links.active {
- display: flex;
+    position: fixed; /* Fixo na tela */
+    top: 75px; /* Abaixo do header */
+    left: 0;
+    background-color: var(--dark-color); /* Fundo escuro */
+    width: 100%;
+    height: calc(100vh - 75px); /* Altura restante da viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha os itens no topo */
+    transform: translateX(0);
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a tela */
   }
 
-  nav .nav-links li {
- margin: 10px 0;
- text-align: center;
+  .burger {
+    display: block; /* Mostra o ícone do menu hambúrguer em telas menores */
   }
 
-  .menu-toggle {
-    display: block; /* Mostra o ícone do menu hambúrguer */
-  }
 
   main {
-    padding: 10px; /* Reduz o padding em telas menores */
+    padding: 0 15px; /* Reduz o padding do conteúdo principal */
   }
 
   h1 {
@@ -263,16 +382,18 @@ a:hover {
     font-size: 1.3em;
   }
 
+  section {
+    padding: 30px 0; /* Reduz padding da seção em telas menores */
+  }
+
   footer {
     flex-direction: column; /* Empilha os itens do rodapé em telas menores */
+    align-items: center; /* Centraliza os itens do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    gap: 20px; /* Reduz o espaçamento entre as seções do rodapé */
   }
-}
-
-/* Classes para o rodapé mais organizado */
-.footer-section h3 {
- margin-bottom: 15px;
-}
-.footer-section p, .footer-section a {
- display: block; /* Cada item em uma nova linha */
- margin-bottom: 5px;
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
