@@ -6,8 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Facx - Institucional</title>
-	<link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
-	<link rel="stylesheet" href="/principal.css">
+ <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />	<link rel="stylesheet" href="global.css">
 	<!-- Add icon library -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -17,8 +16,7 @@
 		class="whatsapp-button" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
 	<header>
 		<div class="container">
-			<div class="div-logo">
-				<a href="principal"><img id="logo" src="public/assets/logow.png"></a>
+ <?php include 'menu.html'; ?>
 			</div>
 			<nav>
 				<ul>
@@ -145,8 +143,6 @@
 					</li>
 				</ul>
 			</nav>
-		</div>
-	</header>
 
 	<!-- Janela popup EVENTOS-->
 	<!-- <div id="eventos" class="popup" onclick="closeEventos()">
@@ -457,6 +453,7 @@
 	</section>
 
 	<footer>
+ <?php include 'footer.html'; ?>
 		<div class="social-icons">
 			<a href="https://www.facebook.com/facx.xingu" class="icon-link"><i class="fab fa-facebook-f"></i></a>
 			<a href="https://www.instagram.com/facx_altamira" class="icon-link"><i class="fab fa-instagram"></i></a>

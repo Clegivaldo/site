@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx - Graduação em Contabilidade</title>
     <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
-    <link rel="stylesheet" href="/global.css">
-    <!-- Add icon library -->
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
