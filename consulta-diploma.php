@@ -1,3 +1,4 @@
+php
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="global.css">
+ <link rel="stylesheet" href="styles.css">
 
         <style>
             .body {
@@ -14,8 +15,8 @@
                 background-position: center;
                 -webkit-filter: blur(7px);
                 -moz-filter: blur(7px);
-                -o-filter: blur(7px);
-                -ms-filter: blur(7px);
+                -o-filter: blur(7px);\
+                -ms-filter: blur(7px);\
                 filter: blur(7px);
                 position: absolute;
                 width: 100%;
@@ -34,7 +35,7 @@
 
         <iframe
             id="assinamos_iframe"
-            src="https://facx.assinamos.com.br/iframe/diploma/" 
+            src="https://facx.assinamos.com.br/iframe/diploma/"
             width="100%"
             height="550px"
             title="Consulta Diploma">

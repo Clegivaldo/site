@@ -1,3 +1,4 @@
+php
 <!DOCTYPE html>
 <html class="html" lang="pt-BR">
 	
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx - Eventos</title>
  <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
- <link rel="stylesheet" href="global.css">
+ <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 	<!-- Fancybox CSS -->
@@ -41,7 +42,7 @@
 		  <ul>
 			<li><a href="public/docs/Acompanhamento_de_egressos.pdf" target="_blank">Acompanhamento de egressos</a></li>
 			<li><a href="public/docs/Programa_de_acessibilidade_e_inclusao.pdf" target="_blank">Acessibilidade e Inclusão</a></li>
-			<li><a href="public/docs/Apoio_a_producao_academico-cultural_e_acesso_a_eventos_de_cunho-cientifico-academico_e_culturais.pdf" target="_blank">Apoio a produção acadêmico-cultural e acesso a eventos de cunho científico-acadêmico e culturais</a></li>
+			<li><a href="public/docs/Apoio_a_producao_academico-cultural_e_acesso_a_eventos_de_cunho-cientifico-academico_e_culturais.pdf" target="_blank">Apoio a produção acadêmico-cultural e acesso a eventos de cunho científico-academico e culturais</a></li>
 			<li><a href="public/docs/Institucional_de_defesa_dos_direitos_hum_e_inclusao_social.pdf" target="_blank">Institucional de defesa dos direitos humanos e inclusão social</a></li>
 			<li><a href="public/docs/Institucional_de_comunicacao_interna_e_externa.pdf" target="_blank">Institucional de comunicação interna e externa</a></li>
 			<li><a href="public/docs/Programa_institucional_de_educacao_ambiental.pdf" target="_blank">Institucional de educação ambiental</a></li>
@@ -313,7 +314,5 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
 <script src="script.js"></script>
-<script src="script.js"></script>
-<?php include 'footer.html'; ?>
 </body>
 </html>

@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facx</title>
- <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />
- <link rel="stylesheet" href=\"global.css\">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="./public/assets/ico_logo.png" />    
+ <link rel="stylesheet" href="styles.css">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -22,11 +21,23 @@
             <div class="carousel-container">
                 <!-- Estrutura básica do carrossel - Adicione suas imagens e links aqui -->
                 <div class="carousel-slide">
-                    <a href="#"><img src="placeholder-carousel-1.jpg" alt="Imagem 1 do Carrossel"></a>
+                    <a href="direito.php">
+ <img src="public/assets/direito60.png" alt="Imagem do Curso de Direito">
+ </a>
                 </div>
                 <div class="carousel-slide">
-                    <a href="#"><img src="placeholder-carousel-2.jpg" alt="Imagem 2 do Carrossel"></a>
+                    <a href="enfermagem.php">
+ <img src="public/assets/enfermagem60.png" alt="Imagem do Curso de Enfermagem">
+ </a>
                 </div>
+                <div class="carousel-slide">
+                    <a href="administracao.php">
+ <img src="public/assets/administracao60.png" alt="Imagem do Curso de Administração">
+ </a>
+                </div>
+                <div class="carousel-slide">
+                    <a href="contabilidade.php">
+ <img src="public/assets/contabilidade60.png" alt="Imagem do Curso de Contabilidade">
                 <!-- Adicione mais slides conforme necessário -->
             </div>
         </section>
